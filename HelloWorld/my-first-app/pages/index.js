@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Button from './button'
 import Image from './image'
 import Lista from './lista'
+import Eventos from './eventos'
 
 const infoPage = {
   title: 'Create Next App',
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        //usar para acessar os dados armazenados, acessar funções etc.
+        {/* {} usar para acessar os dados armazenados, acessar funções etc. */}
         <title>{infoPage.title}</title> 
         <link rel="icon" href={infoPage.icon} />
       </Head>
@@ -27,11 +28,16 @@ export default function Home() {
         <div>
           <p>estrutura condicional para chamada de componente </p>
           {chooseComponent ? (<Button />) : (<Image />)}
-        </div>
+        </div><br />
 
         <div>
           <p>Renderizando listas em um componente</p>
           <Lista />
+        </div> <br />
+
+        <div>
+          <p>chamando eventos no componente</p>
+          <Eventos />
         </div>
       </main>
     </>

@@ -3,6 +3,8 @@ import Button from './button'
 import Image from './image'
 import Lista from './lista'
 import Eventos from './eventos'
+import StateComponent from './state'
+import GlobalState from './GlobalState'
 
 const infoPage = {
   title: 'Create Next App',
@@ -36,9 +38,22 @@ export default function Home() {
         </div> <br />
 
         <div>
-          <p>chamando eventos no componente</p>
+          <p>Chamando eventos no componente</p>
           <Eventos />
-        </div>
+        </div> <br />
+
+        <div>
+          <p>Usando o State para armazenar os dados</p>
+          <StateComponent />
+        </div> <br />
+
+        <div>
+          <p>
+            Atualizando os dados de 2 componentes usando 
+            um State Global
+          </p>
+          <GlobalState />
+        </div> <br />
       </main>
     </>
   )

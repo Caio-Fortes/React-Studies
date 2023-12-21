@@ -20,10 +20,8 @@ function App() {
        formsVisible={formsVisible} 
        setFormsVisible={setFormsVisible} 
       />
-      <ButtonRemove 
-
-      />
-      <ButtonEdit />
+      <ButtonRemove lista={lista} setLista={setLista} />
+      <ButtonEdit lista={lista} setLista={setLista} />
       {formsVisible ? ( <Forms />) : (<></>) }
     </div>
   );

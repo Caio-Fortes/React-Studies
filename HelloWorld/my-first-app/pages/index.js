@@ -24,7 +24,7 @@ export default function Home() {
       <main>
         <div>
           <p>Exemplo de chamada de componente</p>
-          <Button /> 
+          <Button teste={infoPage}/> 
         </div> <br />
 
         <div>

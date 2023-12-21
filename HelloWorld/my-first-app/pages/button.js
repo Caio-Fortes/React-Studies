@@ -2,7 +2,7 @@ export default function Button(){
     return (
         <>
             <button>
-                 I am Button 
+                 I am Button
             </button>
         </>
     )

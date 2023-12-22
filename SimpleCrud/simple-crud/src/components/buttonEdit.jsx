@@ -1,13 +1,17 @@
-export default function ButtonEdit({lista, setLista}){
+export default function ButtonEdit(
+    {setFormsVisible, setAction, dadosSelected}){
+
     function verificarDadosSelecteds(){
-        const dadosSelecionados = lista.filter(dado => dado.Selected);
-        const desabilitar = dadosSelecionados.length > 0 ? false : true;
-        return desabilitar;
+        return dadosSelected.length > 0 && dadosSelected.length < 2 ? false : true;
     }
-    
+    function mostrarFormulario(){
+        setAction('Editar');
+        setFormsVisible(true);
+    }
+
     return (
-        <button disabled={verificarDadosSelecteds()}>
-            Editar
+        <button disabled={verificarDadosSelecteds()} onClick={mostrarFormulario}>
+            Editar 
         </button>
     )
 }

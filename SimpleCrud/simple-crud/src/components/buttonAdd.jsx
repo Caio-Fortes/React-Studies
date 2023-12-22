@@ -1,6 +1,8 @@
-export default function ButtonAdicionar({formsVisible, setFormsVisible}){
+export default function ButtonAdicionar(
+    {setFormsVisible, setAction}){
     function mostrarFormulario(){
-        setFormsVisible(formsVisible = !formsVisible)
+        setAction('Criar');
+        setFormsVisible(true);
     }
 
     return (

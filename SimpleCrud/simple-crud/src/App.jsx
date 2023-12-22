@@ -18,6 +18,7 @@ function App() {
   useEffect(() => {
     const onlyDadosSelected = lista.filter(a => a.Selected == true);
     setDadosSelected(onlyDadosSelected);
+    setFormsVisible(false);
   }, [lista]);
 
   return (
@@ -25,20 +26,25 @@ function App() {
       <Listagem lista={lista} setLista={setLista}/> <br />
       <ButtonAdicionar 
        setFormsVisible={setFormsVisible}
-       setAction={setAction}
+       setAction={setAction} 
+       dadosSelected={dadosSelected}
       />
       <ButtonRemove 
-       lista={lista} 
-       setLista={setLista}
+       lista={lista} setLista={setLista}
        dadosSelected={dadosSelected}
       />
       <ButtonEdit
-       setFormsVisible={setFormsVisible}
-       setAction={setAction}
+       setFormsVisible={setFormsVisible} setAction={setAction}
        dadosSelected={dadosSelected}
       />
       {formsVisible ? 
-        ( <Forms action={action} setFormsVisible={setFormsVisible} /> ) : (<></>) 
+        ( 
+         <Forms 
+          action={action} setFormsVisible={setFormsVisible}
+          lista={lista} setLista={setLista}
+          dadosSelected={dadosSelected}
+         /> 
+         ) : (<></>) 
       }
     </div>
   );
